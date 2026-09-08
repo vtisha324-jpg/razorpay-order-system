@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useCart } from "../context/CartContext";
-import "../styles/cart.css";
+import "../styles/Cart.css";
 
 function Cart() {
   const { cart, updateQuantity, removeFromCart, totalAmount } = useCart();
