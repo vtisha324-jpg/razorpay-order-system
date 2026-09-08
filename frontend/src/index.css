@@ -1,0 +1,13 @@
+/* Minimal global reset only.
+   Removed the default Vite boilerplate (#root width/flex/border,
+   h1/h2 styles, code/.counter styles) because it was conflicting
+   with page-specific layouts like the login page. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+}

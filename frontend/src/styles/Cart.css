@@ -1,0 +1,233 @@
+.cart-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 32px 60px;
+}
+
+.cart-container h1 {
+  font-family: "Sora", sans-serif;
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+/* Empty state */
+.cart-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #b6bccf;
+}
+
+.cart-empty p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.cart-browse-btn {
+  background: linear-gradient(90deg, #6c63ff, #8a7dff);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.cart-browse-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Items list */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 64px 1fr auto auto auto;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+.cart-item-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  color: #c7cce0;
+  background: rgba(108, 99, 255, 0.15);
+}
+
+.cart-item-info h3 {
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  color: #f1f3f9;
+  margin-bottom: 6px;
+}
+
+.cart-item-price {
+  font-size: 13px;
+  color: #9aa1b9;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  padding: 6px 10px;
+}
+
+.cart-item-qty button {
+  background: none;
+  border: none;
+  color: #f1f3f9;
+  font-size: 15px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cart-item-qty button:hover {
+  color: #8a7dff;
+}
+
+.cart-item-qty span {
+  font-size: 13.5px;
+  color: #e8eaf2;
+  min-width: 16px;
+  text-align: center;
+}
+
+.cart-item-subtotal {
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  color: #e8b04d;
+  min-width: 70px;
+  text-align: right;
+}
+
+.cart-item-remove {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.cart-item-remove:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Summary */
+.cart-summary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 22px 24px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #d1d5e0;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.cart-total strong {
+  font-family: "Sora", sans-serif;
+  font-size: 22px;
+  color: #e8b04d;
+}
+
+.cart-checkout-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #6c63ff, #8a7dff);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.cart-checkout-btn:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  .cart-item {
+    grid-template-columns: 48px 1fr;
+    grid-template-areas:
+      "image info"
+      "image qty"
+      "subtotal subtotal"
+      "remove remove";
+    row-gap: 10px;
+  }
+
+  .cart-item-image {
+    grid-area: image;
+    width: 48px;
+    height: 48px;
+  }
+
+  .cart-item-info {
+    grid-area: info;
+  }
+
+  .cart-item-qty {
+    grid-area: qty;
+    justify-self: start;
+  }
+
+  .cart-item-subtotal {
+    grid-area: subtotal;
+    text-align: left;
+  }
+
+  .cart-item-remove {
+    grid-area: remove;
+    justify-self: start;
+  }
+}

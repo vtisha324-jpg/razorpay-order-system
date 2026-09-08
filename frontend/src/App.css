@@ -1,0 +1,4 @@
+/* App.css intentionally left minimal.
+   Page-specific styles (login.css, etc.) handle their own layout.
+   The default Vite boilerplate #root / body styles were removed
+   because they were conflicting with full-page layouts. */
